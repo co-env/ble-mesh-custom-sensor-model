@@ -7,4 +7,4 @@ set(srcs "main.c"
 
 idf_component_register(SRCS "${srcs}"
                     INCLUDE_DIRS  "."
-                    REQUIRES bt button custom_sensor_client esp32_SGP30)
+                    REQUIRES bt button ble-mesh-custom-sensor-model esp32_SGP30)

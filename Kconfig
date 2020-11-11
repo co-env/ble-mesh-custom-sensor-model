@@ -1,0 +1,22 @@
+menu "BLE Mesh Custom Sensor Model Configuration"
+    choice MESH_DEVICE_TYPE
+        prompt "Device Type"
+        default COENV_NODE_TYPE_SENSOR
+        help
+            Select device type
+
+        config COENV_NODE_TYPE_SENSOR
+            bool "Sensor Node"
+        
+        config COENV_NODE_TYPE_GATEWAY
+            bool "Gateway Node"
+    endchoice
+
+    config MESH_DEVICE_NAME
+        string "Device Name"
+        default "COEnv Node"
+        help 
+            Type in the desired device name
+
+    
+endmenu

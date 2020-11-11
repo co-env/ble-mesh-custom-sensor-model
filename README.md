@@ -3,6 +3,6 @@
 :construction: WIP
 
 
-**Note**: example folder uses SGP30 sensor lib as a component (not added here)
+**Note**: custom sensor client example uses SGP30 sensor lib as a component (not added here)
 
 

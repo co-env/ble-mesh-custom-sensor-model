@@ -9,9 +9,9 @@ include($ENV{IDF_PATH}/tools/cmake/project.cmake)
 
 set(EXTRA_COMPONENT_DIRS $ENV{IDF_PATH}/examples/bluetooth/esp_ble_mesh/common_components/button)
 
-list(APPEND EXTRA_COMPONENT_DIRS "..")
+list(APPEND EXTRA_COMPONENT_DIRS "../..")
 list(APPEND EXTRA_COMPONENT_DIRS components/esp32_SGP30)
 
 
 
-project(mesh_custom_sensor_client_model_example)
+project(client)

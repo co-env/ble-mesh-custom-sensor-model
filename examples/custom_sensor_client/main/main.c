@@ -11,7 +11,8 @@
 
 #include "esp_log.h"
 
-#include "mesh_client.h"
+// #include "mesh_client.h"
+#include "mesh_device_app.h"
 #include "board.h"
 
 #include "SGP30.h"
@@ -104,6 +105,7 @@ void app_main(void) {
     // ble_mesh_get_dev_uuid(dev_uuid);
 
     /* Initialize the Bluetooth Mesh Subsystem */
+    // err = ble_mesh_device_init_client();
     err = ble_mesh_device_init();
     if (err) {
         ESP_LOGE(TAG, "Bluetooth mesh init failed (err %d)", err);
