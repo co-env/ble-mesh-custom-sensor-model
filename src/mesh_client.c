@@ -310,12 +310,18 @@ static void parse_received_data(esp_ble_mesh_model_cb_param_t *recv_param, model
     parsed_data = (model_sensor_data_t *)recv_param->client_recv_publish_msg.msg;
 
     ESP_LOGW("PARSED_DATA", "Device Name = %s", parsed_data->device_name);
-    ESP_LOGW("PARSED_DATA", "Temperature = %d", parsed_data->temperature);
-    ESP_LOGW("PARSED_DATA", "Pressure    = %d", parsed_data->pressure);
-    ESP_LOGW("PARSED_DATA", "Humidity    = %d", parsed_data->humidity);
+    ESP_LOGW("PARSED_DATA", "Temperature = %f", parsed_data->temperature);
+    ESP_LOGW("PARSED_DATA", "Pressure    = %f", parsed_data->pressure);
+    ESP_LOGW("PARSED_DATA", "Humidity    = %f", parsed_data->humidity);
     ESP_LOGW("PARSED_DATA", "TVOC        = %d", parsed_data->tVOC);
     ESP_LOGW("PARSED_DATA", "eCO2        = %d", parsed_data->eCO2);
     ESP_LOGW("PARSED_DATA", "Noise       = %d", parsed_data->noise_level);
+    ESP_LOGW("PARSED_DATA", "Red         = %f", parsed_data->red);
+    ESP_LOGW("PARSED_DATA", "Orange      = %f", parsed_data->orange);
+    ESP_LOGW("PARSED_DATA", "Yellow      = %f", parsed_data->yellow);
+    ESP_LOGW("PARSED_DATA", "Green       = %f", parsed_data->green);
+    ESP_LOGW("PARSED_DATA", "Blue        = %f", parsed_data->blue);
+    ESP_LOGW("PARSED_DATA", "Violet      = %f", parsed_data->violet);
 }
 
 

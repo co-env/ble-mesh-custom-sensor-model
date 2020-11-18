@@ -35,13 +35,13 @@
 /** 
  * @brief Device Main Data Structure
  */
-typedef struct {
+typedef struct __attribute__((packed)) {
     char device_name[6];
     
     /**< BME280 Data */
-    uint16_t temperature;   /*!< BME260 calibrated temperature */
-    uint16_t pressure;      /*!< BME260 calibrated pressure */
-    uint16_t humidity;      /*!< BME260 calibrated humidity */
+    float temperature;   /*!< BME260 calibrated temperature */
+    float pressure;      /*!< BME260 calibrated pressure */
+    float humidity;      /*!< BME260 calibrated humidity */
 
     /**< SGP30 Data */
     uint16_t tVOC;          /*!< SGP30 total volatile organic compound */
@@ -50,8 +50,14 @@ typedef struct {
     /**< Mic Noise */
     uint16_t noise_level;   /*!< Analog microphone noise level */
 
-    //! Add AS7262 data (float?)
-} __attribute__((packed)) model_sensor_data_t;
+    /**< AS7262 data */
+    float red;          /*!< AS7262 calibrated red */
+    float orange;       /*!< AS7262 calibrated orange */
+    float yellow;       /*!< AS7262 calibrated yellow */
+    float green;        /*!< AS7262 calibrated green */
+    float blue;         /*!< AS7262 calibrated blue */
+    float violet;       /*!< AS7262 calibrated violet */
+} model_sensor_data_t;
 
 
 #endif  // __CUSTOM_SENSOR_MODEL_DEFS_H__
