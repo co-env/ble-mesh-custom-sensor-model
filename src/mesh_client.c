@@ -30,7 +30,7 @@
 
 static uint8_t dev_uuid[16] = { 0xdd, 0xdd };               /**< Device UUID */
 static uint16_t node_net_idx = ESP_BLE_MESH_KEY_UNUSED;     /**< Stores Netkey Index after provisioning */
-static uint16_t node_app_idx = ESP_BLE_MESH_KEY_UNUSED;     /**< Stores Appkey Index bound to the Custom Model by the provisioner */
+static uint16_t node_app_idx = ESP_BLE_MESH_NET_PRIMARY;    /**< Stores Appkey Index bound to the Custom Model by the provisioner, defaults to 0x000 primary key */
 
 
 //* Definicao do Configuration Server Model
