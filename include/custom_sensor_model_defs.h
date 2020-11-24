@@ -57,6 +57,9 @@ typedef struct __attribute__((packed)) {
     float green;        /*!< AS7262 calibrated green */
     float blue;         /*!< AS7262 calibrated blue */
     float violet;       /*!< AS7262 calibrated violet */
+
+    /**< Feedback answers */
+    uint8_t feedback;   /*!< Each bit corresponds to an answer: (NEW_DATA | X | X | TEMP_COMF | HIGH_TEMP | SOUND_COMF | LIGHT_COMF | LIGHTNESS) */
 } model_sensor_data_t;
 
 
